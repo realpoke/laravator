@@ -73,28 +73,26 @@ The workflow leverages several GitHub Actions, including those from [appleboy](h
 Here is an example of what your `deployment-config.json` should look like:
 
 ```json
-{
-  "servers": [
-    {
-      "name": "production-server-1",
-      "ip": "192.168.1.1",
-      "username": "deploy",
-      "port": 22,
-      "path": "/var/www/your-app",
-      "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
-      "afterHooks": "php artisan queue:restart && php artisan config:cache"
-    },
-    {
-      "name": "production-server-2",
-      "ip": "192.168.1.2",
-      "username": "deploy",
-      "port": 22,
-      "path": "/var/www/your-app",
-      "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
-      "afterHooks": "php artisan queue:restart && php artisan config:cache"
-    }
-  ]
-}
+[
+  {
+    "name": "production-server-1",
+    "ip": "192.168.1.1",
+    "username": "deploy",
+    "port": 22,
+    "path": "/var/www/your-app",
+    "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
+    "afterHooks": "php artisan queue:restart && php artisan config:cache"
+  },
+  {
+    "name": "production-server-2",
+    "ip": "192.168.1.2",
+    "username": "deploy",
+    "port": 22,
+    "path": "/var/www/your-app",
+    "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
+    "afterHooks": "php artisan queue:restart && php artisan config:cache"
+  }
+]
 ```
 
 ## Usage
