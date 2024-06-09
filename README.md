@@ -102,7 +102,8 @@ Here is an example of what your `deployment-config.json` should look like:
 2. **Set GitHub Secrets**: Add the necessary secrets to your GitHub repository settings:
    - `SSH_KEY`: Private SSH key for server access.
    - `LARAVEL_ENV`: Environment configuration for your Laravel application, aka the `.env` file that should be in production.
-3. **Push to Production Branch**: Push your code to the `production` branch to trigger the workflow.
+3. **Ensure User is in www-data Group**: Make sure that the user running the workflow is in the www-data group on the server.
+4. **Push to Production Branch**: Push your code to the production branch to trigger the workflow.
 
 ## Acknowledgment
 
