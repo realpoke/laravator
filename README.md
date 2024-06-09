@@ -38,7 +38,7 @@ The workflow leverages several GitHub Actions, including those from [appleboy](h
 1. **Checkout Code**: Checks out the code from the repository.
 2. **Setup Node**: Sets up Node.js for asset compilation.
 3. **Compile CSS and Javascript**: Installs dependencies and compiles the assets using `yarn`.
-4. **Setup PHP**: Configures PHP 8.2 with the necessary extensions.
+4. **Setup PHP**: Configures PHP 8.3 with the necessary extensions.
 5. **Install Composer Dependencies**: Installs PHP dependencies.
 6. **Create Deployment Artifacts**: Creates a tarball of the application for deployment.
 7. **Store Artifacts**: Uploads the deployment artifacts to GitHub Actions.
