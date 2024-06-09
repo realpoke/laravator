@@ -100,13 +100,11 @@ jobs:
   run-before-hooks:
     name: "${{ matrix.server.name }} Before Hook"
     runs-on: ubuntu-24.04
-    needs: [ create-deployment-artifacts, prepare-release-on-server ]
+    needs: [create-deployment-artifacts, prepare-release-on-server]
     strategy:
       matrix:
         server: ${{ fromJson(needs.create-deployment-artifacts.outputs.deployment-matrix) }}
     steps:
-    - name: Create .env file
-      run: printf "%s" "$LARAVEL_ENV" > ${{ matrix.server.path }}/releases/${{ github.sha }}/.env
     - name: Run Before Hooks
       uses: appleboy/ssh-action@master
       env:
