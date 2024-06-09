@@ -28,10 +28,11 @@ Make sure the following PHP extensions are installed:
 
 ## GitHub Actions Workflow
 
-The workflow leverages several GitHub Actions, including those from [appleboy](https://github.com/appleboy):
+The workflow leverages several GitHub Actions, including those from [appleboy](https://github.com/appleboy) and [shivammathur](https://github.com/shivammathur):
 
 - `appleboy/scp-action`: Securely copy files to your server.
 - `appleboy/ssh-action`: Execute commands on your server over SSH.
+- `shivammathur/setup-php`: Set up PHP with the necessary extensions.
 
 ### Workflow Steps
 
@@ -106,6 +107,7 @@ Here is an example of what your `deployment-config.json` should look like:
 ## Acknowledgment
 
 - **appleboy GitHub Actions**: The workflow uses actions from [appleboy](https://github.com/appleboy), such as `scp-action` and `ssh-action`.
+- **shivammathur/setup-php@v2**: Used for setting up PHP environment in the workflow.
 
 ## License
 
