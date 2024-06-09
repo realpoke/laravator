@@ -81,8 +81,8 @@ Here is an example of what your `deployment-config.json` should look like:
     "username": "deploy",
     "port": "22",
     "path": "/var/www/your-app",
-    "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
-    "afterHooks": "php artisan queue:restart && php artisan config:cache"
+    "beforeHooks": "",
+    "afterHooks": "php artisan migrate --force && php artisan queue:restart && php artisan optimize"
   },
   {
     "name": "production-server-2",
@@ -90,8 +90,8 @@ Here is an example of what your `deployment-config.json` should look like:
     "username": "deploy",
     "port": "22",
     "path": "/var/www/your-app",
-    "beforeHooks": "php artisan migrate --force && php artisan cache:clear",
-    "afterHooks": "php artisan queue:restart && php artisan config:cache"
+    "beforeHooks": "",
+    "afterHooks": "php artisan migrate --force && php artisan queue:restart && php artisan optimize"
   }
 ]
 ```
