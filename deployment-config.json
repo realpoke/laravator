@@ -1,6 +1,7 @@
 [
   {
     "name": "production-server-1",
+    "saves": "3",
     "ip": "192.168.1.1",
     "username": "deploy",
     "port": "22",
@@ -10,6 +11,7 @@
   },
   {
     "name": "production-server-2",
+    "saves": "1",
     "ip": "192.168.1.2",
     "username": "deploy",
     "port": "22",
