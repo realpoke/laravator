@@ -77,6 +77,7 @@ Here is an example of what your `deployment-config.json` should look like:
 [
   {
     "name": "production-server-1",
+    "saves": "1",
     "ip": "192.168.1.1",
     "username": "deploy",
     "port": "22",
@@ -86,6 +87,7 @@ Here is an example of what your `deployment-config.json` should look like:
   },
   {
     "name": "production-server-2",
+    "saves": "3",
     "ip": "192.168.1.2",
     "username": "deploy",
     "port": "22",
